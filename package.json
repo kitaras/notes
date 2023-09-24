@@ -1,0 +1,26 @@
+{
+  "main": "public/electron.js",
+  "name": "Sniprecord",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "dev": "concurrently -k \"npm start\" \"npm:electron\"",
+    "electron": "wait-on tcp:3000 && electron ."
+  },
+  "dependencies": {
+    "@astrojs/turbolinks": "^0.1.4",
+    "astro": "^1.1.5",
+    "astro-icon": "^0.7.3",
+    "electron-builder": "^23.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "electron": "^20.1.1",
+    "electron-is-dev": "^2.0.0",
+    "wait-on": "^6.0.1"
+  }
+}
